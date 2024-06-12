@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F0F0"
+    tools:context=".Fragment.HomeFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Profile_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:src="@drawable/person" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="@string/travelling_made_simple"
+        android:textColor="#979797"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Profile_image"
+        app:layout_constraintWidth_percent="0.6" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#EFEDED"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintWidth_percent="0.8">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/Edt_StartingPoint"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/edt_shape3"
+                android:cursorVisible="false"
+                app:layout_constraintWidth_percent="0.8"
+                android:focusable="false"
+                android:hint="Starting Point"
+                android:paddingStart="20dp"
+                android:textColor="#8C8C8C"
+                android:textSize="20sp"
+
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/StartSpinner"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_margin="15dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/baseline_arrow_drop_down_24"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="@+id/Edt_StartingPoint"
+                app:layout_constraintEnd_toEndOf="@+id/Edt_StartingPoint"
+                app:layout_constraintTop_toTopOf="@+id/Edt_StartingPoint" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/baseline_arrow_downward_24"
+                app:layout_constraintBottom_toBottomOf="@+id/Edt_DestinationPoint"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/Edt_StartingPoint" />
+
+
+            <EditText
+                android:id="@+id/Edt_DestinationPoint"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edt_shape3"
+                android:cursorVisible="false"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:focusable="false"
+                android:hint="Destination Point"
+                app:layout_constraintWidth_percent="0.8"
+                android:paddingStart="20dp"
+                android:textColor="#8C8C8C"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Edt_StartingPoint" />
+
+            <Spinner
+                android:id="@+id/DestSpinner"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/baseline_arrow_drop_down_24"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="@+id/Edt_DestinationPoint"
+                app:layout_constraintEnd_toEndOf="@+id/Edt_DestinationPoint"
+                app:layout_constraintTop_toTopOf="@+id/Edt_DestinationPoint" />
+
+            <TextView
+                android:id="@+id/Tv_Start_Date"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/btn_shape1"
+                app:layout_constraintWidth_percent="0.9"
+                android:layout_marginTop="10dp"
+                app:layout_constraintHeight_percent="0.2"
+                android:hint="Wed, Mar 20"
+                android:gravity="center_vertical"
+                android:paddingStart="20dp"
+                android:textColor="#8C8C8C"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Edt_DestinationPoint" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/SearchButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="#0078FF"
+        android:text="@string/search"
+        android:textSize="18dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3"
+        app:layout_constraintWidth_percent="0.8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

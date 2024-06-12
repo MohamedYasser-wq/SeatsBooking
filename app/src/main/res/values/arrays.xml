@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cities_array">
+
+        <item> </item>
+        <item>cairo</item>
+        <item>alex</item>
+        <item>aswan</item>
+        <item>ismaliya</item>
+        <item>portSaid</item>
+        <item>fayuom</item>
+        <item>luxor</item>
+        <item>Menia</item>
+
+
+    </string-array>
+</resources>

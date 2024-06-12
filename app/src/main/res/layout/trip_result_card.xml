@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="8dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/Tv_Point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Cairo"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/Tv_Destination"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/Tv_Point"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/Tv_Point"
+            tools:text="Alex" />
+
+        <TextView
+            android:id="@+id/Tv_StartTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Mar 20, 9:35"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"
+            android:textColor="#ACA9A9"
+            app:layout_constraintStart_toStartOf="@id/Tv_Point"
+            app:layout_constraintTop_toBottomOf="@id/Tv_Point"/>
+
+        <TextView
+            android:id="@+id/TV_EndTrip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ACA9A9"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/Tv_StartTime"
+            app:layout_constraintEnd_toEndOf="@id/Tv_Destination"
+            app:layout_constraintTop_toTopOf="@+id/Tv_StartTime"
+            tools:text="Mar 20, 17:35" />
+
+
+        <TextView
+            android:id="@+id/Tv_Vehicle_Type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vip"
+            android:textColor="#ACA9A9"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/TV_EndTrip"
+            app:layout_constraintEnd_toStartOf="@+id/Tv_Destination"
+            app:layout_constraintStart_toEndOf="@+id/Tv_Point"
+            app:layout_constraintTop_toTopOf="@+id/TV_EndTrip" />
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="35dp"
+            android:src="@drawable/baseline_directions_car_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Tv_StartTime" />
+
+        <TextView
+            android:id="@+id/Tv_Company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go Bus"
+            android:textColor="#ACA9A9"
+            android:textSize="20sp"
+            android:layout_marginStart="18dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+
+        <TextView
+            android:id="@+id/tvP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ACA9A9"
+            android:textSize="15sp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Tv_Company"
+            app:layout_constraintTop_toBottomOf="@+id/Tv_Company"
+            android:text="Price" />
+
+        <TextView
+            android:id="@+id/tvPrice_Trip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvP"
+            app:layout_constraintStart_toEndOf="@+id/tvP"
+            app:layout_constraintTop_toTopOf="@+id/tvP"
+            tools:text="1000" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/Btn_Continue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintWidth_percent="0.40"
+            android:text="Continue"
+            android:backgroundTint="#0078FF"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvP" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
